@@ -1,0 +1,170 @@
+---
+title: "The Value of Sharing Information: A Neural Account of Information Transmission"
+author: "Elisa Baek"
+date: "April 21, 2016"
+output: html_document
+---
+
+The Value of Sharing Information: A Neural Account of Information Transmission
+
+First, we will pull ROI datasheets where we ran the contrasts of interest (SELECT TO READ > CONTENT, SHARE > CONTENT, SHARE > SELECT TO READ) in SPM8.
+
+```{r}
+#Subjective Valuation (SV)
+sv_combined<-read.csv('Main Effects/sv_combined.csv')
+sv_vmpfc<-read.csv('Main Effects/sv_vmpfc.csv')
+sv_vs<-read.csv('Main Effects/sv_vs.csv')
+
+#Self-Relevance
+self_combined<-read.csv('Main Effects/self_combined.csv')
+self_mpfc<-read.csv('Main Effects/self_mpfc.csv')
+self_pcc<-read.csv('Main Effects/self_pcc.csv')
+  
+#Social Cognition (SC)
+sc_combined<-read.csv('Main Effects/sc_combined.csv')
+sc_vmpfc<-read.csv('Main Effects/sc_vmpfc.csv')
+sc_mmpfc<-read.csv('Main Effects/sc_mmpfc.csv')
+sc_dmpfc<-read.csv('Main Effects/sc_dmpfc.csv')
+sc_rtpj<-read.csv('Main Effects/sc_rtpj.csv')
+sc_ltpj<-read.csv('Main Effects/sc_ltpj.csv')
+sc_rsts<-read.csv('Main Effects/sc_rsts.csv')
+sc_pc<-read.csv('Main Effects/sc_pc.csv')
+```
+
+Now that the datasheets have been read, we will conduct a series of t-tests for statistical significance.
+
+Select > Content
+```{r}
+#Subjective Valuation
+t.test(sv_combined$READvsCONTENT_reading)
+t.test(sv_vs$READvsCONTENT_reading)
+t.test(sv_vmpfc$READvsCONTENT_reading)
+#Self-Relevance
+t.test(self_combined$READvsCONTENT_reading)
+t.test(self_mpfc$READvsCONTENT_reading)
+t.test(self_pcc$READvsCONTENT_reading)
+#Social Cognition
+t.test(sc_combined$READvsCONTENT_reading)
+t.test(sc_vmpfc$READvsCONTENT_reading)
+t.test(sc_mmpfc$READvsCONTENT_reading)
+t.test(sc_dmpfc$READvsCONTENT_reading)
+t.test(sc_rtpj$READvsCONTENT_reading)
+t.test(sc_ltpj$READvsCONTENT_reading)
+t.test(sc_rsts$READvsCONTENT_reading)
+t.test(sc_pc$READvsCONTENT_reading)
+```
+
+Share > Content
+```{r}
+#Subjective Valuation
+t.test(sv_combined$SHAREvsCONTENT_reading)
+t.test(sv_vs$SHAREvsCONTENT_reading)
+t.test(sv_vmpfc$SHAREvsCONTENT_reading)
+#Self-Relevance
+t.test(self_combined$SHAREvsCONTENT_reading)
+t.test(self_mpfc$SHAREvsCONTENT_reading)
+t.test(self_pcc$SHAREvsCONTENT_reading)
+#Social Cognition
+t.test(sc_combined$SHAREvsCONTENT_reading)
+t.test(sc_vmpfc$SHAREvsCONTENT_reading)
+t.test(sc_mmpfc$SHAREvsCONTENT_reading)
+t.test(sc_dmpfc$SHAREvsCONTENT_reading)
+t.test(sc_rtpj$SHAREvsCONTENT_reading)
+t.test(sc_ltpj$SHAREvsCONTENT_reading)
+t.test(sc_rsts$SHAREvsCONTENT_reading)
+t.test(sc_pc$SHAREvsCONTENT_reading)
+```
+
+Share > Select
+```{r}
+#Subjective Valuation
+t.test(sv_combined$SHAREvsREAD_reading)
+t.test(sv_vs$SHAREvsREAD_reading)
+t.test(sv_vmpfc$SHAREvsREAD_reading)
+#Self-Relevance
+t.test(self_combined$SHAREvsREAD_reading)
+t.test(self_mpfc$SHAREvsREAD_reading)
+t.test(self_pcc$SHAREvsREAD_reading)
+#Social Cognition
+t.test(sc_combined$SHAREvsREAD_reading)
+t.test(sc_vmpfc$SHAREvsREAD_reading)
+t.test(sc_mmpfc$SHAREvsREAD_reading)
+t.test(sc_dmpfc$SHAREvsREAD_reading)
+t.test(sc_rtpj$SHAREvsREAD_reading)
+t.test(sc_ltpj$SHAREvsREAD_reading)
+t.test(sc_rsts$SHAREvsREAD_reading)
+t.test(sc_pc$SHAREvsREAD_reading)
+```
+
+Next, we will try to answer the question - does activity in these ROIs scale with preference for selection and sharing?
+
+First, we will pull ROIs of the results of the parametric modulator model we ran in SPM8.
+
+```{r}
+#Subjective Valuation (SV)
+sv_combined_rating<-read.csv('Parametric Modulation/sv_combined.csv')
+sv_vmpfc_rating<-read.csv('Parametric Modulation/sv_vmpfc.csv')
+sv_vs_rating<-read.csv('Parametric Modulation/sv_vs.csv')
+
+#Self-Relevance
+self_combined_rating<-read.csv('Parametric Modulation/self_combined.csv')
+self_mpfc_rating<-read.csv('Parametric Modulation/self_mpfc.csv')
+self_pcc_rating<-read.csv('Parametric Modulation/self_pcc.csv')
+  
+#Social Cognition (SC)
+sc_combined_rating<-read.csv('Parametric Modulation/sc_combined.csv')
+sc_vmpfc_rating<-read.csv('Parametric Modulation/sc_vmpfc.csv')
+sc_mmpfc_rating<-read.csv('Parametric Modulation/sc_mmpfc.csv')
+sc_dmpfc_rating<-read.csv('Parametric Modulation/sc_dmpfc.csv')
+sc_rtpj_rating<-read.csv('Parametric Modulation/sc_rtpj.csv')
+sc_ltpj_rating<-read.csv('Parametric Modulation/sc_ltpj.csv')
+sc_rsts_rating<-read.csv('Parametric Modulation/sc_rsts.csv')
+sc_pc_rating<-read.csv('Parametric Modulation/sc_pc.csv')
+```
+
+Next, we will conduct a series of t-tests to test for significance.
+
+```{r}
+# Select x Rating
+# Neural activity modulated by preference to select articles
+
+#Subjective Valuation
+t.test(sv_combined_rating$readxrating)
+t.test(sv_vs_rating$readxrating)
+t.test(sv_vmpfc_rating$readxrating)
+#Self-Relevance
+t.test(self_combined_rating$readxrating)
+t.test(self_mpfc_rating$readxrating)
+t.test(self_pcc_rating$readxrating)
+#Social Cognition
+t.test(sc_combined_rating$readxrating)
+t.test(sc_vmpfc_rating$readxrating)
+t.test(sc_mmpfc_rating$readxrating)
+t.test(sc_dmpfc_rating$readxrating)
+t.test(sc_rtpj_rating$readxrating)
+t.test(sc_ltpj_rating$readxrating)
+t.test(sc_rsts_rating$readxrating)
+t.test(sc_pc_rating$readxrating)
+
+# Share x Rating
+# Neural activity modulated by preference to share articles
+
+#Subjective Valuation
+t.test(sv_combined_rating$sharexrating)
+t.test(sv_vs_rating$sharexrating)
+t.test(sv_vmpfc_rating$sharexrating)
+#Self-Relevance
+t.test(self_combined_rating$sharexrating)
+t.test(self_mpfc_rating$sharexrating)
+t.test(self_pcc_rating$sharexrating)
+#Social Cognition
+t.test(sc_combined_rating$sharexrating)
+t.test(sc_vmpfc_rating$sharexrating)
+t.test(sc_mmpfc_rating$sharexrating)
+t.test(sc_dmpfc_rating$sharexrating)
+t.test(sc_rtpj_rating$sharexrating)
+t.test(sc_ltpj_rating$sharexrating)
+t.test(sc_rsts_rating$sharexrating)
+t.test(sc_pc_rating$sharexrating)
+```
+
