@@ -12,7 +12,7 @@ Humans routinely share information with others. What drives us to do so? We used
 
 * To investigate the relationship between neural activity during the consideration of selecting and sharing news articles, we conducted a series of analyses using neural activity extracted from three sets of a priori regions-of-interest (ROIs) defined by three separate meta-analyses.
 
-    1. Subjective value processing [VS + VMPFC] (Bartra et al., 2013)
+    1. Subjective value processing [VS + VMPFC] \(Bartra et al., 2013\)
 
     ![Subjective value processing ROI](img/BaekFig2a.jpg)
     ![Subjective value processing ROI](img/BaekFig2b.jpg)
