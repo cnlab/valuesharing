@@ -1,4 +1,4 @@
-## Data and analysis code for Baek, Scholz, O'Donnell & Falk (2017). The Value of Sharing Information: A Neural Account of Information Transmission. __PsychScience_.
+## Data and analysis code for Baek, Scholz, O'Donnell & Falk (2017). The Value of Sharing Information: A Neural Account of Information Transmission. _PsychScience_.
 
 
 ### Abstract
