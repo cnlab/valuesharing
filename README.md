@@ -17,13 +17,13 @@ Humans routinely share information with others. What drives us to do so? We used
     ![Subjective value processing ROI](img/BaekFig2a.jpg)
     ![Subjective value processing ROI](img/BaekFig2b.jpg)
 
-    2. Self-related processing [MPFC + PCC] (Murray et al., 2012)
+    2. Self-related processing [MPFC + PCC] \(Murray et al., 2012\)
 
     ![](img/BaekFig2c.jpg)
     ![](img/BaekFig2d.jpg)
 
 
-    3. Social cognition [VMPFC, MMPFC, DMPFC, PC/PCC, PC, bilateral TPJ, and rSTS] (Dufour et al., 2013). 
+    3. Social cognition [VMPFC, MMPFC, DMPFC, PC/PCC, PC, bilateral TPJ, and rSTS] \(Dufour et al., 2013\). 
 
     ![](img/BaekFig2e.jpg)
     ![](img/BaekFig2f.jpg)
